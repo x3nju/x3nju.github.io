@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>10.0.0.1</title>
+    <script type="text/javascript">
+    var name = "";
+         while (name == "" || name == null) {
+           name = prompt("            What should I call you?");
+        }
+        if(name !== "" || name !== null) {
+          alert(name+ " uhmm, may sasabihin sana ako");
+          var confirmation = confirm("okay lang ba sayo?");
+          if(!confirmation) {
+            alert("okay..");
+            window.close();
+          }
+        }
+        
+      var flag = 1;
+      function f1() {
+          alert("Yownn\nPapayag ka din pala");
+          var response = confirm("So tayo na?");
+          if(response) {
+            alert("I LOVE YOU 🤭")
+            document.body.style.backgroundImage = "url(https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundAttachment = "fixed";
+            document.body.style.backgroundPosition = "center";
+            document.getElementById("mainImage").src="https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif";
+        } else {
+          alert("Awts. 😔");
+          document.body.style.backgroundImage= "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundAttachment = "fixed";
+            document.body.style.backgroundPosition = "center";
+          document.getElementById("mainImage").src ="https://tenor.com/view/sad-gif-13261737358986789359.gif";
+        }
+      }
+      function f() {
+        
+        if (flag == 1) {
+          Bn.style.top = '60%';
+          Bn.style.left = '10%';
+          flag = 2;
+        } else if (flag == 2) {
+          Bn.style.top = '70%';
+          Bn.style.left = '79%';
+          flag = 3;
+        } else if (flag == 3) {
+          Bn.style.top = '80%';
+          Bn.style.left = '65%';
+          flag = 1;
+          alert("choosy pa eh");
+        }
+      }
+    </script>
+    <style>
+      .no-scroll {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+        </style>
+  </head>
+  <body style="background-color:pink; overflow:hidden;">
+    <center>
+      <div class="no-scroll">
+    <h1><b>Will you be my girlfriend?</b></h1>
+    <img src="https://tenor.com/view/cute-fingers-fixed-cat-cut-fingers-shy-gif-24961649.gif" alt="Cute cat" id="mainImage" style="height:550px; width:550px;">
+    <h1 style="#"><b>please</b></h1>
+      </div>
+    <div id="By" class="no-scroll" style="position:absolute; left:35%; top:80%; width:25%">
+      <input style="height:100px; width:200px;" type="button" value="YES" onclick="f1()">
+    </div>
+    <div id="Bn" class="no-scroll" style="position:absolute; left:65%; top:80%; width:25%">
+      <input style="height:100px; width:200px;" type="button" value="NO" onclick="f()">
+      </center>
+    </div>
+  </body>
+</html>
