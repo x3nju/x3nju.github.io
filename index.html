@@ -15,7 +15,8 @@
             window.close();
           }
         }
-        
+      var audio1 = new Audio("https://raw.githubusercontent.com/x3nju/x3nju.github.io/main/Bananacat.mp3");
+      var audio2 = new Audio("https://raw.githubusercontent.com/x3nju/x3nju.github.io/main/Kilig.mp3");
       var flag = 1;
       function f1() {
           alert("Yownn\nPapayag ka din pala");
@@ -27,9 +28,8 @@
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundAttachment = "fixed";
             document.body.style.backgroundPosition = "center";
-            document.getElementById("mainImage").src="https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif";
-            var audio = document.getElementById("kilig");
-            audio.play();
+            document.getElementById("mainImage").src="https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif;
+            audio2.play();
         } else {
           alert("Awts. 😔");
           document.body.style.backgroundImage= "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
@@ -37,9 +37,8 @@
             document.body.style.backgroundRepeat = "no-repeat";
             document.body.style.backgroundAttachment = "fixed";
             document.body.style.backgroundPosition = "center";
-          document.getElementById("mainImage").src ="https://tenor.com/view/sad-gif-13261737358986789359.gif";
-            var audio = document.getElementById("iyak");
-            audio.play();
+          document.getElementById("mainImage").src ="https://tenor.com/view/sad-gif-13261737358986789359.gif"; 
+            audio1.play();
         }
       }
       function f() {
@@ -82,10 +81,6 @@
     <div id="Bn" class="no-scroll" style="position:absolute; left:65%; top:80%; width:25%">
       <input style="height:100px; width:200px;" type="button" value="NO" onclick="f()">
       </center>
-    </div>
-    <audio controls autoplay id="myAudio">
-      <source src="https://raw.githubusercontent.com/x3nju/x3nju.github.io/main/Bananacat.mp3" type="audio/mp3" id="iyak">
-      <source src="https://raw.githubusercontent.com/x3nju/x3nju.github.io/main/Kilig.mp3" type="audio/mp3" id="kilig">
-    </audio>
+  </div>
   </body>
 </html>
