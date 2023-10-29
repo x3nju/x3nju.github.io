@@ -3,46 +3,41 @@
   <head>
     <title>10.0.0.1</title>
     <script type="text/javascript">
-    var name = "";
-         while (name == "" || name == null) {
-           name = prompt("            What should I call you?");
+      var name = "";
+      while (name == "" || name == null) {
+        name = prompt("            What should I call you?");
+      }
+      if (name !== "" || name !== null) {
+        alert(name + " uhmm, may sasabihin sana ako");
+        var confirmation = confirm("okay lang ba sayo?");
+        if (!confirmation) {
+          alert("okay..");
+          window.close();
         }
-        if(name !== "" || name !== null) {
-          alert(name+ " uhmm, may sasabihin sana ako");
-          var confirmation = confirm("okay lang ba sayo?");
-          if(!confirmation) {
-            alert("okay..");
-            window.close();
-          }
-        }
-      var audio1 = new Audio("https://raw.githubusercontent.com/x3nju/x3nju.github.io/main/Bananacat.mp3");
-      var audio2 = new Audio("https://raw.githubusercontent.com/x3nju/x3nju.github.io/main/Kilig.mp3");
+      }
       var flag = 1;
       function f1() {
-          alert("Yownn\nPapayag ka din pala");
-          var response = confirm("So tayo na?");
-          if(response) {
-            alert("I LOVE YOU 🤭")
-            document.body.style.backgroundImage = "url(https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif)";
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundAttachment = "fixed";
-            document.body.style.backgroundPosition = "center";
-            document.getElementById("mainImage").src="https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif";
-            audio2.play();
+        alert("Yownn\nPapayag ka din pala");
+        var response = confirm("So tayo na?");
+        if (response) {
+          alert("I LOVE YOU 🤭")
+          document.body.style.backgroundImage = "url(https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif)";
+          document.body.style.backgroundSize = "cover";
+          document.body.style.backgroundRepeat = "no-repeat";
+          document.body.style.backgroundAttachment = "fixed";
+          document.body.style.backgroundPosition = "center";
+          document.getElementById("mainImage").src = "https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif";
         } else {
           alert("Awts. 😔");
-          document.body.style.backgroundImage= "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundRepeat = "no-repeat";
-            document.body.style.backgroundAttachment = "fixed";
-            document.body.style.backgroundPosition = "center";
-          document.getElementById("mainImage").src ="https://tenor.com/view/sad-gif-13261737358986789359.gif";
-            audio1.play();
-      }
+          document.body.style.backgroundImage = "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
+          document.body.style.backgroundSize = "cover";
+          document.body.style.backgroundRepeat = "no-repeat";
+          document.body.style.backgroundAttachment = "fixed";
+          document.body.style.backgroundPosition = "center";
+          document.getElementById("mainImage").src = "https://tenor.com/view/sad-gif-13261737358986789359.gif";
+        }
       }
       function f() {
-        
         if (flag == 1) {
           Bn.style.top = '60%';
           Bn.style.left = '10%';
@@ -58,12 +53,6 @@
           alert("choosy pa eh");
         }
       }
-        document.getElementById("playButton1").addEventListener('click', function() {
-          audio1.play();
-        });
-        document.getElementById("playButton2").addEventListener('click', function() {
-          audio2.play();
-        });
     </script>
     <style>
       .no-scroll {
@@ -82,10 +71,10 @@
         <h1 style="#"><b>please</b></h1>
       </div>
       <div id="By" class="no-scroll" style="position:absolute; left:35%; top:80%; width:25%">
-        <input style="height:100px; width:200px;" type="button" value="YES" onclick="f1()" id="playButton1">
+        <input style="height:100px; width:200px;" type="button" value="YES" onclick="f1()">
       </div>
       <div id="Bn" class="no-scroll" style="position:absolute; left:65%; top:80%; width:25%">
-        <input style="height:100px; width:200px;" type="button" value="NO" onclick="f()" id="playButton2">
+        <input style="height:100px; width:200px;" type="button" value="NO" onclick="f()">
       </div>
     </center>
   </body>
