@@ -29,9 +29,7 @@
             document.body.style.backgroundAttachment = "fixed";
             document.body.style.backgroundPosition = "center";
             document.getElementById("mainImage").src="https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif;
-            document.getElementById('playButton').addEventListener('click', function() {
-  audio2.play();
-});
+    
         } else {
           alert("Awts. 😔");
           document.body.style.backgroundImage= "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
@@ -40,9 +38,7 @@
             document.body.style.backgroundAttachment = "fixed";
             document.body.style.backgroundPosition = "center";
           document.getElementById("mainImage").src ="https://tenor.com/view/sad-gif-13261737358986789359.gif"; 
-          document.getElementById('playButton').addEventListener('click', function() {
-  audio1.play();
-        });
+          
       }
       function f() {
         
@@ -61,6 +57,12 @@
           alert("choosy pa eh");
         }
       }
+        document.getElementById("playButton").addEventListener('click', function() {
+  audio1.play();
+        });
+        document.getElementById("playButton").addEventListener('click', function() {
+  audio2.play();
+      });
     </script>
     <style>
       .no-scroll {
