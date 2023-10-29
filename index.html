@@ -40,6 +40,7 @@
           document.getElementById("mainImage").src ="https://tenor.com/view/sad-gif-13261737358986789359.gif";
             audio1.play();
       }
+      }
       function f() {
         
         if (flag == 1) {
@@ -57,12 +58,12 @@
           alert("choosy pa eh");
         }
       }
-        document.getElementById("playButton").addEventListener('click', function() {
-  audio1.play();
+        document.getElementById("playButton1").addEventListener('click', function() {
+          audio1.play();
         });
-        document.getElementById("playButton").addEventListener('click', function() {
-  audio2.play();
-      });
+        document.getElementById("playButton2").addEventListener('click', function() {
+          audio2.play();
+        });
     </script>
     <style>
       .no-scroll {
@@ -71,21 +72,21 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
-        </style>
+    </style>
   </head>
   <body style="background-color:pink; overflow:hidden;">
     <center>
       <div class="no-scroll">
-    <h1><b>Will you be my girlfriend?</b></h1>
-    <img src="https://tenor.com/view/cute-fingers-fixed-cat-cut-fingers-shy-gif-24961649.gif" alt="Cute cat" id="mainImage" style="height:550px; width:550px;">
-    <h1 style="#"><b>please</b></h1>
+        <h1><b>Will you be my girlfriend?</b></h1>
+        <img src="https://tenor.com/view/cute-fingers-fixed-cat-cut-fingers-shy-gif-24961649.gif" alt="Cute cat" id="mainImage" style="height:550px; width:550px;">
+        <h1 style="#"><b>please</b></h1>
       </div>
-    <div id="By" class="no-scroll" style="position:absolute; left:35%; top:80%; width:25%">
-      <input style="height:100px; width:200px;" type="button" value="YES" onclick="f1()">
-    </div>
-    <div id="Bn" class="no-scroll" style="position:absolute; left:65%; top:80%; width:25%">
-      <input style="height:100px; width:200px;" type="button" value="NO" onclick="f()">
-      </center>
-  </div>
+      <div id="By" class="no-scroll" style="position:absolute; left:35%; top:80%; width:25%">
+        <input style="height:100px; width:200px;" type="button" value="YES" onclick="f1()" id="playButton1">
+      </div>
+      <div id="Bn" class="no-scroll" style="position:absolute; left:65%; top:80%; width:25%">
+        <input style="height:100px; width:200px;" type="button" value="NO" onclick="f()" id="playButton2">
+      </div>
+    </center>
   </body>
 </html>
