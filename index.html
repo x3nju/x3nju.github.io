@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>10.0.0.1</title>
-    <script type="text/javascript">
-      var name = "";
-      while (name == "" || name == null) {
-        name = prompt("            What should I call you?");
+<head>
+  <title>10.0.0.1</title>
+  <script type="text/javascript">
+    var name = "";
+    while (name == "" || name == null) {
+      name = prompt("            What should I call you?");
+    }
+    if (name !== "" || name !== null) {
+      alert(name + " uhmm, may sasabihin sana ako");
+      var confirmation = confirm("Okay lang ba sayo?");
+      if (!confirmation) {
+        alert("Okay..");
+        window.close();
       }
-      if (name !== "" || name !== null) {
-        alert(name + " uhmm, may sasabihin sana ako");
-        var confirmation = confirm("Okay lang ba sayo?");
-        if (!confirmation) {
-          alert("Okay..");
-          window.close();
-        }
+    }
+
+    var flag = 1;
+    function f1() {
+      var buttonYes = document.getElementById('By');
+      var buttonNo = document.getElementById('Bn');
+      alert("Yiee..\nPumayag sya HAHAHA");
+      var response = confirm("So pwede na kita ligawan?");
+      if (response) {
+        alert("Yown!!\nI LOVE YOU 🤭")
+        document.body.style.backgroundImage = "url(https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif)";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundPosition = "center";
+        document.getElementById("mainImage").src = "https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif";
+        document.getElementById("h1").textContent = 'YIEEEEE...';
+        document.getElementById("h1(2)").textContent = 'KILIG AKO HAHAHA';
+      } else {
+        alert("Awts.. Sakit mo lods\njinojoke time mo bako? 😔");
+        console.log("Sakit nun!");
+        document.body.style.backgroundImage = "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundPosition = "center";
+        document.getElementById("mainImage").src = "https://tenor.com/view/sad-gif-13261737358986789359.gif";
+        document.getElementById("h1").textContent = 'Awts..';
+        document.getElementById("h1(2)").textContent = 'Sakit mo lods';
       }
-      var flag = 1;
-      function f1() {
-        alert("Yiee..\nPumayag sya HAHAHA");
-        var response = confirm("So pwede na kita ligawan?");
-        if (response) {
-          alert("Yown!!\nI LOVE YOU 🤭")
-          document.body.style.backgroundImage = "url(https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif)";
-          document.body.style.backgroundSize = "cover";
-          document.body.style.backgroundRepeat = "no-repeat";
-          document.body.style.backgroundAttachment = "fixed";
-          document.body.style.backgroundPosition = "center";
-          document.getElementById("mainImage").src = "https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif";
-        } else {
-          alert("Awts.. Sakit mo lods\njinojoke time mo bako? 😔");
-          document.body.style.backgroundImage = "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
-          document.body.style.backgroundSize = "cover";
-          document.body.style.backgroundRepeat = "no-repeat";
-          document.body.style.backgroundAttachment = "fixed";
-          document.body.style.backgroundPosition = "center";
-          document.getElementById("mainImage").src = "https://tenor.com/view/sad-gif-13261737358986789359.gif";
-        }
+
+      if (buttonYes) {
+        buttonYes.remove();
       }
-      function f() {
-        if (flag == 1) {
-          Bn.style.top = '60%';
-          Bn.style.left = '10%';
-          flag = 2;
-        } else if (flag == 2) {
-          Bn.style.top = '70%';
-          Bn.style.left = '79%';
-          flag = 3;
-        } else if (flag == 3) {
-          Bn.style.top = '80%';
-          Bn.style.left = '65%';
-          flag = 1;
-          alert("choosy pa eh");
-        }
+
+      if (buttonNo) {
+        buttonNo.remove();
       }
-    </script>
-    <style>
-      .no-scroll {
-        position: absolute;
+
+      setTimeout(function () {
+        window.close();
+      }, 15000);
+    }
+    function f() {
+      if (flag == 1) {
+        Bn.style.top = '60%';
+        Bn.style.left = '10%';
+        flag = 2;
+      } else if (flag == 2) {
+        Bn.style.top = '70%';
+        Bn.style.left = '79%';
+        flag = 3;
+      } else if (flag == 3) {
+        Bn.style.top = '80%';
+        Bn.style.left = '65%';
+        flag = 1;
+        alert("choosy pa eh");
+      }
+    }
+  </script>
+  <style>
+  h1 {
+   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+    text-stroke: 1px rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+    .no-scroll {
+      position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -80,9 +105,9 @@
   <body style="background-color:pink; overflow:hidden;">
     <center>
       <div class="no-scroll">
-        <h1><b>Can I court you, </b></h1>
+        <h1 id="h1"><b>Can I court you, </b></h1>
         <img src="https://tenor.com/view/cute-fingers-fixed-cat-cut-fingers-shy-gif-24961649.gif" alt="Cute cat" id="mainImage" style="height:550px; width:550px;" class="image">
-        <h1 style="#"><b>given a chance, or not?</b></h1>
+        <h1 id="h1(2)" style="#"><b>given a chance, or not?</b></h1>
       </div>
       <div id="By" class="no-scroll" style="position:absolute; left:35%; top:80%; width:25%">
         <button style="height:100px; width:200px;" type="sumbit" value="YES" onclick="f1()">YES</button>
