@@ -61,20 +61,34 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
+      .image {
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      button {
+      font-size:25pt;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      button:hover {
+        background-color: #fff;
+      }
     </style>
   </head>
   <body style="background-color:pink; overflow:hidden;">
     <center>
       <div class="no-scroll">
         <h1><b>Can I court you, </b></h1>
-        <img src="https://tenor.com/view/cute-fingers-fixed-cat-cut-fingers-shy-gif-24961649.gif" alt="Cute cat" id="mainImage" style="height:550px; width:550px;">
+        <img src="https://tenor.com/view/cute-fingers-fixed-cat-cut-fingers-shy-gif-24961649.gif" alt="Cute cat" id="mainImage" style="height:550px; width:550px;" class="image">
         <h1 style="#"><b>given a chance, or not?</b></h1>
       </div>
       <div id="By" class="no-scroll" style="position:absolute; left:35%; top:80%; width:25%">
-        <input style="height:100px; width:200px;" type="button" value="YES" onclick="f1()">
+        <button style="height:100px; width:200px;" type="sumbit" value="YES" onclick="f1()">YES</button>
       </div>
       <div id="Bn" class="no-scroll" style="position:absolute; left:65%; top:80%; width:25%">
-        <input style="height:100px; width:200px;" type="button" value="NO" onclick="f()">
+        <button style="height:100px; width:200px;" type="submit" value="NO" onclick="f()">NO</button>
       </div>
     </center>
   </body>
