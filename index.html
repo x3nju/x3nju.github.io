@@ -1,28 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gay test</title>
-    <script>
-    alert("Instructions:")
-    alert("Cancel for No\nOk for Yes")
-        function askIfGay() {
-            var result = confirm("Are you gay?");
-            
-            if (result) {
-              alert("AHA!!");
-                alert("I knew it!");
-                window.close();
-            } else {
-                askIfGay();
-            }
-        }
-    </script>
-</head>
-<body>
-<script>
-askIfGay();
-</script>
-</body>
+  <title>10.0.0.1</title>
+  <script type="text/javascript">
+    var name = "";
+    while (name == "" || name == null) {
+      name = prompt("            What should I call you?");
+    }
+    if (name !== "" || name !== null) {
+      alert(name + " uhmm, may sasabihin sana ako");
+      var confirmation = confirm("Okay lang ba sayo?");
+      if (!confirmation) {
+        alert("Okay..");
+        window.close();
+      }
+    }
+
+    var flag = 1;
+    function f1() {
+      var buttonYes = document.getElementById('By');
+      var buttonNo = document.getElementById('Bn');
+      alert("Yiee..\nPumayag sya HAHAHA");
+      var response = confirm("So pwede na kita ligawan?");
+      if (response) {
+        alert("Yown!!\nI LOVE YOU 🤭")
+        document.body.style.backgroundImage = "url(https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif)";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundPosition = "center";
+        document.getElementById("mainImage").src = "https://tenor.com/view/kermit-kermit-love-kermit-hearts-in-love-gif-16028344.gif";
+        document.getElementById("h1").textContent = 'YIEEEEE...';
+        document.getElementById("h1(2)").textContent = 'KILIG AKO HAHAHA';
+      } else {
+        alert("Awts.. Sakit mo lods\njinojoke time mo bako? 😔");
+        console.log("Sakit nun!");
+        document.body.style.backgroundImage = "url(https://tenor.com/view/rain-raining-drizzle-water-droplets-gif-15858035.gif)";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundAttachment = "fixed";
+        document.body.style.backgroundPosition = "center";
+        document.getElementById("mainImage").src = "https://tenor.com/view/sad-gif-13261737358986789359.gif";
+        document.getElementById("h1").textContent = 'Awts..';
+        document.getElementById("h1(2)").textContent = 'Sakit mo lods';
+      }
+
+      if (buttonYes) {
+        buttonYes.remove();
+      }
+
+      if (buttonNo) {
+        buttonNo.remove();
+      }
+
+      setTimeout(function () {
+        window.close();
+      }, 15000);
+    }
+    function f() {
+      if (flag == 1) {
+        Bn.style.top = '60%';
+        Bn.style.left = '10%';
+        flag = 2;
+      } else if (flag == 2) {
+        Bn.style.top = '70%';
+        Bn.style.left = '79%';
+        flag = 3;
+      } else if (flag == 3) {
+        Bn.style.top = '80%';
+        Bn.style.left = '65%';
+        flag = 1;
+        alert("choosy pa eh");
+      }
+    }
+  </script>
+  <style>
+  h1 {
+    font-size: 35pt;
+   -webkit-text-stroke: 1px black;
+    text-stroke: 1px black;
+    color: white;
+  }
+    .no-scroll {
+      position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .image {
+        border-radius: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      button {
+      font-size:25pt;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      }
+      button:active {
+        background-color: #FFC0CB;
+      }
+    </style>
+  </head>
+  <body style="background-color:pink; overflow:hidden;">
+    <center>
+      <div class="no-scroll">
+        <h1 id="h1"><b>Can I court you, </b></h1>
+        <img src="https://tenor.com/view/cute-fingers-fixed-cat-cut-fingers-shy-gif-24961649.gif" alt="Cute cat" id="mainImage" style="height:550px; width:550px;" class="image">
+        <h1 id="h1(2)" style="#"><b>given a chance, or not?</b></h1>
+      </div>
+      <div id="By" class="no-scroll" style="position:absolute; left:35%; top:80%; width:25%">
+        <button style="height:100px; width:200px;" type="sumbit" value="YES" onclick="f1()">YES</button>
+      </div>
+      <div id="Bn" class="no-scroll" style="position:absolute; left:65%; top:80%; width:25%">
+        <button style="height:100px; width:200px;" type="submit" value="NO" onclick="f()">NO</button>
+      </div>
+    </center>
+  </body>
 </html>
