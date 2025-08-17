@@ -133,6 +133,105 @@
   </div>
 </body>
 </html>
+      
+      if (answer === "YES") {
+        document.body.style.backgroundImage = "url(https://tenor.com/view/cat-cute-happy-jumping-gif-26555219.gif)";
+        document.getElementById("giff").src = "https://tenor.com/view/cat-cute-happy-jumping-gif-26555219.gif";
+        document.getElementById("question").innerHTML = "YESSSS!!!"
+        setTimeout(function() {
+          alert("Weh, di ngaa???!!");
+        }, 1500);
+      } else if (answer === "NO") {
+        document.body.style.backgroundImage = "url(https://tenor.com/view/wet-cat-gif-4802327955459959719.gif)";
+        document.getElementById("giff").src = "https://tenor.com/view/wet-cat-gif-4802327955459959719.gif";
+        document.getElementById("question").innerHTML = "Aww, aray ko.";
+      }
+      emailjs.send("service_wisoc6p", "template_hudh7h4", {
+        to_email: "jarlaclancioco@gmail.com",
+        from_name: userName,
+        message: answer,
+      })
+      .then(() => {
+        alert(userName + "'s response sent. 💖");
+      })
+      .catch((error) => {
+        alert(userName + "'s response failed to send. 💔");
+        console.error(error);
+      });
+    }
+  </script>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      padding: 25px;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      background-image: url('https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .container {
+      margin: 20px;
+      padding: 15px;
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      
+      background: rgba(255, 255, 255, 0.1); /* light transparent layer */
+  backdrop-filter: blur(6px);           /* controls blur strength */
+  -webkit-backdrop-filter: blur(8px);   /* for Safari support */
+  border-radius: 15px;
+    }
+    .container.show {
+      visibility: visible;
+      opacity: 1;
+    }
+    .btns {
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 5px;
+      color: white;
+      font-size: 14pt;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      width: 100px;
+      cursor: pointer;
+      font-size: 12pt;
+      font-weight: bold;
+    }
+    #y { background-color: darkgreen; }
+    #y:hover { background-color: green; }
+    #n { background-color: darkred; }
+    #n:hover { background-color: red; }
+    #question {
+      font-size: 16pt;
+      font-weight: bold;
+    }
+    #giff {
+      border-radius: 15px;
+      max-width: 30%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="giff" src="https://tenor.com/view/cat-seductive-seductive-look-seduce-seductive-cat-gif-16987506852153385232.gif" alt="">
+    <h2 id="question">Can I court you, <br>given a chance or not?</h2>
+    <button class="btns" id="y" onclick="sendResponse('YES')">Yes</button>
+    <button class="btns" id="n" onclick="sendResponse('NO')">No</button>
+  </div>
+</body>
+</html>
   }
   #n {
     background-color: red;
