@@ -9,6 +9,7 @@
     (function() {
       emailjs.init("a-dJjRbEnTPIvrotL"); // replace with your EmailJS public key
     })();
+    alert("❗❗THIS IS NOT A VIRUS OR ANY MALWARE.❗❗READ ALL THE MESSAGES CAREFULLY BEFORE PROCEEDING.")
 
     let userName = "";
 
@@ -21,6 +22,11 @@
         }
         userName = userName.trim();
       }
+      alert("No one may have told you this, " + userName + ", but your smile is the sweetest thing I’ve ever seen.");
+      alert("Your gentle presence and kind personality caught my attention, and now I can’t take my eyes off you.");
+      alert("I know this may be sudden and even confusing, but I can’t deny that I’m slowly falling for you.");
+      alert("I want to know you more, " + userName + ", and I hope you’ll let me be closer to you, because nothing would make me happier than to be the reason behind your brightest smiles.");
+      alert("So.. ");
 
       // fade in the container
       document.querySelector(".container").classList.add("show");
@@ -35,15 +41,16 @@
         btn.style.display = "none";
       });
       
-      if (answer === "YES") {
+      if (answer === "yes") {
         document.body.style.backgroundImage = "url(https://tenor.com/view/cat-cute-happy-jumping-gif-26555219.gif)";
         document.getElementById("giff").src = "https://tenor.com/view/cat-cute-happy-jumping-gif-26555219.gif";
         document.getElementById("question").innerHTML = "YESSSS!!!"
         setTimeout(function() {
           alert("Weh, di ngaa???!!");
-          alert("Gusto mo na ba'ko makilala?");
-        }, 1500);
-      } else if (answer === "NO") {
+          alert("Wanna know me?");
+          alert("I'll introduce myself sooner..");
+        }, 1800);
+      } else if (answer === "no") {
         document.body.style.backgroundImage = "url(https://tenor.com/view/wet-cat-gif-4802327955459959719.gif)";
         document.getElementById("giff").src = "https://tenor.com/view/wet-cat-gif-4802327955459959719.gif";
         document.getElementById("question").innerHTML = "Aww, aray ko.";
@@ -114,7 +121,7 @@
       font-weight: bold;
     }
     #y { background-color: darkgreen; }
-    #y:hover { background-color: green; }
+    #y:hover { background-color: lightgreen; }
     #n { background-color: darkred; }
     #n:hover { background-color: red; }
     #question {
@@ -134,8 +141,8 @@
   <div class="container">
     <img id="giff" src="https://tenor.com/view/cat-seductive-seductive-look-seduce-seductive-cat-gif-16987506852153385232.gif" alt="">
     <h2 id="question">Can I court you, <br>given a chance or not?</h2>
-    <button class="btns" id="y" onclick="sendResponse('YES')">Yes</button>
-    <button class="btns" id="n" onclick="sendResponse('NO')">No</button>
+    <button class="btns" id="y" onclick="sendResponse('yes')">Yes</button>
+    <button class="btns" id="n" onclick="sendResponse('no')">No</button>
   </div>
 </body>
 </html>
