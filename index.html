@@ -90,9 +90,9 @@
       background-attachment: fixed;
     }
     .container {
-      min-width: 300px;
-      max-width: 90%;
-      min-height: 150px;
+      width: 80%;
+      max-width: 800px;
+      min-height: 300px;
       padding: 40px;
       visibility: hidden;
       opacity: 0;
@@ -108,15 +108,15 @@
       opacity: 1;
     }
     .btns {
+      display: inline-block;
       border: none;
       border-radius: 5px;
-      padding: 10px 15px;
-      margin: 5px;
+      padding: 15px;
+      margin: 10px;
       color: white;
       font-size: 14pt;
       box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-      width: 40%;
-      height: 50%;
+      width: 120px;
       cursor: pointer;
       font-size: 24pt;
       font-weight: bold;
@@ -136,6 +136,13 @@
       height: auto;
       margin-bottom: 15px;
     }
+    @media (max-width: 400px) {
+  .btns {
+    display: inline-block;      /* makes each button take a whole line */
+    width: 100px;         /* button stretches across the container */
+    margin: 5px 5px;    /* centers the button */
+  }
+}
   </style>
 </head>
 <body>
