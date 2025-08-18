@@ -43,8 +43,8 @@
       
       if (answer === "yes") {
         document.getElementById("music").play();
-        document.body.style.backgroundImage = "url(https://tenor.com/view/love-gif-16700285954546140230.gif)";
-        document.getElementById("giff").src = "https://tenor.com/view/ofjiyu-kpop-meme-kpop-memes-gif-25900853.gif";
+        document.body.style.backgroundImage = "url(yesBg.gif)";
+        document.getElementById("giff").src = "yesGif.gif";
         document.getElementById("question").innerHTML = "YESSSS!!!"
         setTimeout(function() {
           alert("Weh, di ngaa???!!");
@@ -53,8 +53,8 @@
         }, 1800);
       } else if (answer === "no") {
         document.getElementById("music1").play();
-        document.body.style.backgroundImage = "url(https://tenor.com/view/-gif-3578650.gif)";
-        document.getElementById("giff").src = "https://tenor.com/view/cat-gif-8292472585049493842.gif";
+        document.body.style.backgroundImage = "url(noBg.gif)";
+        document.getElementById("giff").src = "noGif.gif";
         document.getElementById("question").innerHTML = "Aww.., okay.";
       }
       emailjs.send("service_wisoc6p", "template_hudh7h4", {
@@ -84,7 +84,7 @@
       align-items: center;
       min-height: 100vh;
       text-align: center;
-      background-image: url('https://tenor.com/view/chimmy-gifz-hearts-explosion-gif-17912128.gif');
+      background-image: url('bg.gif');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -147,7 +147,7 @@
     <source src="nosurprises.mp3" type="audio/mpeg">
   </audio>
   <div class="container">
-    <img id="giff" src="https://tenor.com/view/nanobombs-cat-flower-gif-9240641794916841111.gif" alt="">
+    <img id="giff" src="gif.gif" alt="">
     <h2 id="question">Can I court you, <br>given a chance or not?</h2>
     <button class="btns" id="y" onclick="sendResponse('yes')">Yes</button>
     <button class="btns" id="n" onclick="sendResponse('no')">No</button>
